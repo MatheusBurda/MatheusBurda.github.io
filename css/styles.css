@@ -43,7 +43,7 @@ h2{
 }
 
 h3{
-    color: var(--color-gray-dark);
+    color: var(--color-gray);
     font: 500 2rem Poppins; 
 }
 
@@ -56,6 +56,10 @@ p{
 li{
     font: 500 1.2rem Poppins; 
     color: var(--color-gray);
+}
+
+hr{
+    border: 1px solid var(--color-blue);
 }
 
 h1,
@@ -79,7 +83,6 @@ p{
 }
 
 #page-landing .header .photo-container{
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,7 +104,7 @@ p{
     align-content: center;
     text-decoration: none;
     display: inline-block;
-    padding: 10px;
+    padding: 7px;
     margin-right: 1rem;
     box-shadow: 3px 3px 3px grey;
 }
@@ -148,7 +151,6 @@ p{
 
 #page-landing #main-body .skills .skills-header p{
     text-align: justify;
-    /* color: var(--color-gray); */
 }
 
 #page-landing #main-body .skills .skills-body .skills-cell{
@@ -174,4 +176,31 @@ p{
 
 #page-landing #main-body .skills .skills-body .skills-cell .topics{
     grid-area: three;
+    padding-inline-start: 20px;
+}
+
+
+/* MAIN - PROJECTS */
+
+#page-landing #main-body .projects .projects-header{
+    align-items: center;
+    text-align: center;
+}
+
+#page-landing #main-body .projects .projects-header p{
+    text-align: justify;
+}
+
+#page-landing #main-body .projects .projects-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page-landing #main-body .projects .projects-body .project p{
+    text-align: justify;
+}
+
+#page-landing #main-body .projects .projects-body hr{
+    color: var(--color-gray);
 }
