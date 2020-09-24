@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="description">
-                    <p>Olá, tenho 21 anos, sou estudante de Engenharia de Computação e sou Técnico em Eletrônica formado na UTFPR. Sou um inventor em constante aprendizado apaixonado por programação e eletrônica.</p>
+                    <p>Olá, sou Matheus Burda e tenho 21 anos. Sou estudante de Engenharia de Computação e sou Técnico em Eletrônica formado na UTFPR. Sou um inventor em constante aprendizado apaixonado por programação e eletrônica.</p>
                     <p>Um café e uma boa música sempre são bem vindos.</p>
                     <p>Este site busca mostrar um pouco das minhas invenções e habilidades desenvolvidas ao longo da vida.</p>
                 </div>
@@ -52,8 +52,11 @@
             </header>
         </div>
 
+        <div class="line-body"><hr></div>
     
         <div class="skills">
+
+
             <header class="skills-header">
                 <h2>Habilidades</h2>
                 <p>Habilidades desenvolvidas ao longo da minha jornada e áreas de interesse.</p>
@@ -114,8 +117,55 @@
             <div class="projects-body">
 
                 <div class="project">
+                    <h3>Site próprio</h3>
+                    <img class="project-image"src="/images/projects/site.png" alt="site-image">
+                    <div class="comments-project">
+                        <p>Este site é 100% minha autoria e feito com conceito Mobile First. Sempre tive curiosidade de como é fazer um site em HTML e CSS, juntei o útil ao agradável e fiz meu próprio site. Já havia construído outros 3 sites, porém usando aqueles construtores de site de empresas de hospedagem. No começo é complicado entender as coisas em CSS e como deixar tudo bonito e responsivo, mas depois de muita pesquisa consegui. Gostei bastante do resultado, mas haverá diversas melhorias no futuro.</p>
+                        <h3>Tecnologias utilizadas:</h3>
+                        <ul class="topics">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Mobile First</li>
+                        </ul>
+                    </div>
+                    <div class="buttons-container">
+
+                        <a href="https://github.com/MatheusBurda/MatheusBurda.github.io" class="button-project" target="_blank">
+                            <img src="/images/icons/github-favicon-dark.png" alt="github-favicon" class="icon">
+                            <p>Visualizar no Github</p>
+                        </a>
+                    </div>
+                        
+                </div>
+
+                <hr>
+
+                <div class="project">
+                    <h3>Campo Minado</h3>
+                    <img class="project-image"src="/images/projects/minesweeper.gif" alt="campo minado image" id="minesweeper">
+                    <div class="comments-project">
+                        <p>Me baseei no jogo de campo minado que jogava no Windows antigamente para criar meu próprio. Após ter feito o BallCollision eu ainda estava com vontade de aprender coisas novas na quarentena. Um professor havia comentado sobre a biblioteca gráfica SDL, então a usei para fazer este jogo. As classes do c++ estão acopladas e não seguem muito bem o padrão orientado a objetos, mas o resultado final está bem agradável.</p>
+                        <h3>Tecnologias utilizadas:</h3>
+                        <ul class="topics">
+                            <li>C++</li>
+                            <li>SDL 2</li>
+                        </ul>
+                    </div>
+                    <div class="buttons-container">
+
+                        <a href="https://github.com/MatheusBurda/MineSweeper" class="button-project" target="_blank">
+                            <img src="/images/icons/github-favicon-dark.png" alt="github-favicon" class="icon">
+                            <p>Visualizar no Github</p>
+                        </a>
+                    </div>
+                        
+                </div>
+
+                <hr>
+
+                <div class="project">
                     <h3>BallCollision</h3>
-                    <img src="/images/projects/BallCollision.gif" alt="BallCollision image">
+                    <img class="project-image"src="/images/projects/BallCollision.gif" alt="BallCollision image">
                     <div class="comments-project">
                         <p>Simulação 3D de colisão elástica entre bolas dentro de um cubo. Este projeto foi meu primeiro contato com Python e PyOpenGL. Após alguns dias com 30 abas abertas no navegador lendo a documentação do OpenGL e aprendendo Python, o simulador saiu do papel. Foi o primeiro projeto que postei publicamente no Github. E produzi um vídeo para o YouTube explicando um pouco mais sobre o código.</p>
                         <h3>Tecnologias utilizadas:</h3>
@@ -140,8 +190,32 @@
                 <hr>
                 
                 <div class="project">
+                    <h3>Pong</h3>
+                    <img class="project-image"src="/images/projects/pong.gif" alt="pong game image">
+                    <div class="comments-project">
+                        <p>Pong é inspirado no famoso jogo de Atari e foi o primeiro jogo que programei. Feito em linguagem C, ele é jogado e 100% impresso no terminal, sem usar bibliotecas gráficas. O código é amador, inclusive possui trechos que pecam em semântica, mas como foi o primeiro programa razoavelmente mais complexo que fiz eu achei importante deixar nessa lista.</p>
+                        <h3>Tecnologias utilizadas:</h3>
+                        <ul class="topics">
+                            <li>Linguagem C</li>
+                            <li>Impressão em qualquer posição do terminal</li>
+                            <li>Impressão colorida no terminal</li>
+                        </ul>
+                    </div>
+                    <div class="buttons-container">
+
+                        <a href="https://github.com/MatheusBurda/Pong" class="button-project" target="_blank">
+                            <img src="/images/icons/github-favicon-dark.png" alt="github-favicon" class="icon">
+                            <p>Visualizar no Github</p>
+                        </a>
+                    </div>
+                        
+                </div>
+
+                <hr>
+                
+                <div class="project">
                     <h3>Carro Controlado por Smartphone</h3>
-                    <img src="/images/projects/Carro.png" alt="pong game image">
+                    <img class="project-image"src="/images/projects/Carro.png" alt="remote car image">
                     <div class="comments-project">
                         <p>Na matéria Microcontroladores 1, no curso de Técnico em Eletrônica, tive que desenvolver um projeto. A minha ideia foi fazer um carro de controle remoto controlado pelo celular. Fui desafiado pelo professor a fazer minha própria interface para controlar o carrinho. Então, usando o MIT App Inventor, eu fiz meu próprio App. Usei o Arduíno Uno, que controlava os motores do carrinho e se comunicava via Bluetooth com o celular. No vídeo do YouTube eu explico melhor o funcionamento e mostro mais detalhes.</p>
                         <h3>Tecnologias utilizadas:</h3>
@@ -163,31 +237,6 @@
                     </div>
                     
                 </div>
-                <hr>
-                
-                <div class="project">
-                    <h3>Pong</h3>
-                    <img src="/images/projects/pong.gif" alt="pong game image">
-                    <div class="comments-project">
-                        <p>Pong é inspirado no famoso jogo de Atari e foi o primeiro jogo que programei. Feito em linguagem C, ele é jogado e 100% impresso no terminal, sem usar bibliotecas gráficas. O código é amador, inclusive possui trechos que pecam em semântica, mas como foi o primeiro programa razoavelmente mais complexo que fiz eu achei importante deixar nessa lista.</p>
-                        <h3>Tecnologias utilizadas:</h3>
-                        <ul class="topics">
-                            <li>Linguagem C</li>
-                            <li>Impressão em qualquer posição do terminal</li>
-                            <li>Impressão colorida no terminal</li>
-                        </ul>
-                    </div>
-                    <div class="buttons-container">
-
-                        <a href="https://github.com/MatheusBurda/Pong" class="button-project" target="_blank">
-                            <img src="/images/icons/github-favicon-dark.png" alt="github-favicon" class="icon">
-                            <p>Visualizar no Github</p>
-                        </a>
-                    </div>
-                        
-                </div>
-
-                
 
             </div>
         </div>

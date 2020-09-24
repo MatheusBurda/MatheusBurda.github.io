@@ -186,6 +186,8 @@ p{
 
 .line-body{
     padding: 0rem 2rem 0rem 2rem ;
+    margin-top: 2rem;
+
 }
 
 /* MAIN - projects */
@@ -215,8 +217,9 @@ p{
     padding: 5px 0;
 }
 
-#page-landing .projects .projects-body .project img{
-    border-radius: 5px;
+#page-landing .projects .projects-body .project .project-image{
+    border-radius: 7px;
+    width: 100%;
 }
 #page-landing .projects .projects-body .project h3:first-child{
     justify-self: center;
@@ -232,7 +235,7 @@ p{
     background-color: var(--color-blue);
     border-radius: 5px;
     margin: 0rem auto 1rem auto;
-    padding: 0rem 1rem;
+    padding: 3px 1rem;
     min-width: 200px;
     align-items: center;
     justify-content: center;
@@ -394,6 +397,7 @@ p{
     }
 
     .line-body{
+        margin-top: 2rem;
         width: 700px;
     }
 
@@ -420,16 +424,29 @@ p{
         "image description"
         "buttons description";
         align-items: center;
+        justify-content: center !important;
     }
     .project h3{
         grid-area: title;
     }
-    .project img{
+    .project .project-image{
         grid-area: image;
+        align-self: start;
+        margin-top: 1rem;
+        justify-self: center;
     } 
+    #minesweeper{
+        width: 80% !important;
+    }
+
+    .project .button-project img{
+        margin-top: 0;
+    }
+
     .project .comments-project{
         padding-left: 1rem;
         grid-area: description;
+        align-self: start;
     } 
     .project .buttons-container{
         grid-area: buttons;
