@@ -1,0 +1,14 @@
+{
+    "header": {
+        "menu": [
+            "Home", "Portfolio", "Contact"
+        ]
+    },
+    "about": {
+        "me": "Hello there, I`m Matheus Burda and I`m 22 years old. I`m a Computer Engeneering Student and Electronics Technician graduated at UTFPR. I'm a constantly learning inventor passionate about programming and electronics.",
+        "website": "This website shows some of my projects and skills developed throughout my life."
+    },
+    "experiences": {
+
+    }
+}
