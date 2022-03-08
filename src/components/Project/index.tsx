@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Container, Content } from './style'
+import { Container, Content, TechIconDiv } from './style'
 
-import svg_cpp from '../../assets/React.svg'
+import { TechIcon } from '../../assets'
 
 interface ProjectProps {
     repository: {
@@ -9,7 +9,7 @@ interface ProjectProps {
         has_pages: boolean;
         homepage: string;
         html_url: string;
-        languages: string;
+        languages_url: string;
         description: string;
     }/* ,
     titleOnLeft: boolean; */
@@ -18,11 +18,13 @@ interface ProjectProps {
 
 export function Project({ repository }: ProjectProps) {
 
-    const [links, setLinks] = useState('');
+    const imageRegEx = /!\[.*]\(.*\)/g;
     const [imageLink, setImageLink] = useState('');
 
-    const imageRegEx = /!\[.*]\(.*\)/ig;
-    const linksRegEx = /\[.*]\(.*\)/g;
+    //const linksRegEx = /\[.*]\(.*\)/g;
+    //const [links, setLinks] = useState('');
+
+    const [languages, setLanguages] = useState<string[]>([]);
 
     useEffect(() => {
 
@@ -30,15 +32,19 @@ export function Project({ repository }: ProjectProps) {
             .then((res) => res.text())
             .then((data) => {
 
-                const image = data.match(imageRegEx)![0];
+                const matchImage = data.match(imageRegEx);
 
-                setImageLink(`${image.substring(image.indexOf('(') + 1, image.indexOf(')'))}?raw=true`);
-
-                const itr = data.matchAll(linksRegEx);
-
-                for (const link of itr) {
-                    console.log(`${repository.name} - ${link}`);
+                if (matchImage) {
+                    const image = matchImage[0];
+                    setImageLink(`${image.substring(image.indexOf('(') + 1, image.indexOf(')'))}?raw=true`);
                 }
+
+            });
+
+        fetch(repository.languages_url)
+            .then((res) => res.json())
+            .then((data) => {
+                setLanguages(Object.keys(data));
             });
 
     }, []);
@@ -51,27 +57,35 @@ export function Project({ repository }: ProjectProps) {
                 <h2>{repository.name}</h2>
                 <p>{repository.description}</p>
 
-                {repository.has_pages &&
-                    <a
-                        href={repository.homepage}
-                        className='underline-hover-effect'
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Go to homepage
-                    </a>}
-
 
                 <a
                     href={repository.html_url}
-                    className='underline-hover-effect'
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    View on Github
+                    <div className='underline-hover-effect'>
+                        View on Github
+                    </div>
                 </a>
 
-                <img src={svg_cpp} alt="C++" />
+                {repository.has_pages &&
+                    <a
+                        href={repository.homepage}
+
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div className='underline-hover-effect'>
+                            Visit project homepage
+                        </div>
+                    </a>
+                }
+
+                <TechIconDiv>
+
+                    {languages.map((lang) => TechIcon(lang, repository.name))}
+
+                </TechIconDiv>
 
             </Content>
 

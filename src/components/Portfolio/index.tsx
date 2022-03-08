@@ -1,3 +1,4 @@
+import { Container } from "./style";
 import { useEffect, useState } from "react";
 import { Project } from "../Project";
 
@@ -9,7 +10,7 @@ interface GithubRepository {
     has_pages: boolean;
     homepage: string;
     html_url: string;
-    languages: string;
+    languages_url: string;
     description: string;
 }
 
@@ -19,16 +20,16 @@ export function Portfolio() {
 
     useEffect(() => {
         fetch(REPOSITORIES_URL)
-        .then(data => data.json())
-        .then(data => setProjects(data));
-    }, [])
+            .then(data => data.json())
+            .then(data => setProjects(data));
+    }, []);
 
 
     return (
-        <>
+        <Container>
             {projects.map((project) => {
-                return project.description ? <Project key={project.id} repository={project} /> : <></>;
-            }) }
-        </>
+                return project.description ? <Project key={project.id} repository={project} /> : null;
+            })}
+        </ Container>
     )
 }

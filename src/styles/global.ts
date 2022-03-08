@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
         --gradient: linear-gradient(90deg, rgba(226,87,87,1) 0%, rgba(63,94,251,1) 120%);
         --background: #1a1a1a;
+        --background-light: #333333;
 
     }
 
@@ -40,7 +41,7 @@ export const GlobalStyle = createGlobalStyle`
     
     body{
         background: var(--background);
-        width: 700px;
+        width: 100%;
     }
 
     h1, h2, h3, h4, h5, h6, strong{
@@ -62,7 +63,6 @@ export const GlobalStyle = createGlobalStyle`
     button {
         cursor: pointer;
         background: var(--background);
-        padding: 1rem;
     }
 
     /* Credits to this tutorial --> https://www.youtube.com/watch?v=Kz96odltLQI */
@@ -76,7 +76,7 @@ export const GlobalStyle = createGlobalStyle`
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 0;
+            width: 50%;
             height: 2px;
             background-image: var(--gradient);
             transition: width 0.25s ease-out;
