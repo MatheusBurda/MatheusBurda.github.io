@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "./static/js/main.ff175aec.js",
+    "static/media/React.svg": "./static/media/React.d7537a559be133f147f8d121c809540a.svg",
+    "static/media/Python.svg": "./static/media/Python.c356a6873d6499d464988051abda3f36.svg",
+    "static/media/JavaScript.svg": "./static/media/JavaScript.74c417fa3cf3be68333e14654209944c.svg",
+    "static/media/Cpp.svg": "./static/media/Cpp.ee00627660e126a705b867992b473f24.svg",
+    "static/media/TypeScript.svg": "./static/media/TypeScript.85ed7b8284370db5a472399d20384c25.svg",
+    "static/media/C.svg": "./static/media/C.223481746f2555f297faaa97b78b96ce.svg",
+    "static/media/HTML.svg": "./static/media/HTML.a77af03948731634988c377f82adebd4.svg",
+    "index.html": "./index.html",
+    "static/media/CSS.svg": "./static/media/CSS.0ebc3e2484dabfad2714f36bf7c00a0b.svg",
+    "main.ff175aec.js.map": "./static/js/main.ff175aec.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.ff175aec.js"
+  ]
+}

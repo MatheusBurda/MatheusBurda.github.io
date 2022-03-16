@@ -11,8 +11,7 @@ interface ProjectProps {
         html_url: string;
         languages_url: string;
         description: string;
-    }/* ,
-    titleOnLeft: boolean; */
+    }
 }
 
 
@@ -20,9 +19,6 @@ export function Project({ repository }: ProjectProps) {
 
     const imageRegEx = /!\[.*]\(.*\)/g;
     const [imageLink, setImageLink] = useState('');
-
-    //const linksRegEx = /\[.*]\(.*\)/g;
-    //const [links, setLinks] = useState('');
 
     const [languages, setLanguages] = useState<string[]>([]);
 
@@ -47,6 +43,7 @@ export function Project({ repository }: ProjectProps) {
                 setLanguages(Object.keys(data));
             });
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 
