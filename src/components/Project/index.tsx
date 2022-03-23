@@ -11,6 +11,7 @@ interface ProjectProps {
         html_url: string;
         languages_url: string;
         description: string;
+        topics: string[];
     }
 }
 
@@ -19,8 +20,6 @@ export function Project({ repository }: ProjectProps) {
 
     const imageRegEx = /!\[.*]\(.*\)/g;
     const [imageLink, setImageLink] = useState('');
-
-    const [languages, setLanguages] = useState<string[]>([]);
 
     useEffect(() => {
 
@@ -37,11 +36,6 @@ export function Project({ repository }: ProjectProps) {
 
             });
 
-        fetch(repository.languages_url)
-            .then((res) => res.json())
-            .then((data) => {
-                setLanguages(Object.keys(data));
-            });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -68,7 +62,6 @@ export function Project({ repository }: ProjectProps) {
                 {repository.has_pages &&
                     <a
                         href={repository.homepage}
-
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -80,7 +73,7 @@ export function Project({ repository }: ProjectProps) {
 
                 <TechIconDiv>
 
-                    {languages.map((lang) => TechIcon(lang, repository.name))}
+                    {repository.topics.map((lang) => TechIcon(lang, repository.name))}
 
                 </TechIconDiv>
 

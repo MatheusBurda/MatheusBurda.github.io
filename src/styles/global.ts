@@ -41,11 +41,36 @@ export const GlobalStyle = createGlobalStyle`
         color: var(--text-color);
     }
     
-    body{
+    body {
         background: var(--background);
         width: 100%;
         height: 100%;
     }
+
+    .fadein {
+        animation: fadein 2s;
+        -moz-animation: fadein 2s; /* Firefox */
+        -webkit-animation: fadein 2s; /* Safari and Chrome */
+        -o-animation: fadein 2s; /* Opera */
+    }
+
+    @keyframes fadein {
+        from { opacity:0;}
+        to { opacity:1;}
+    }
+    @-moz-keyframes fadein { /* Firefox */
+        from { opacity:0;}
+        to { opacity:1;}
+    }
+    @-webkit-keyframes fadein { /* Safari and Chrome */
+        from { opacity:0;}
+        to { opacity:1;}
+    }
+    @-o-keyframes fadein { /* Opera */
+        from { opacity:0;}
+        to { opacity: 1;}
+    }
+
 
     h1, h2, h3, h4, h5, h6, strong{
         font-weight: 600;

@@ -12,6 +12,7 @@ interface GithubRepository {
     html_url: string;
     languages_url: string;
     description: string;
+    topics: string[];
 }
 
 export function Portfolio() {

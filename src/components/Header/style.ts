@@ -51,6 +51,30 @@ export const ImgDiv = styled.div`
         top: -1.5rem;
         left: 1.5rem;
         width: 20rem;
+
+        @keyframes translate {
+            0%{
+                transform: translate(-1.5rem, +1.5rem);
+                -webkit-transform: translate(-1.5rem, +1.5rem);
+                -moz-transform: translate(-1.5rem, +1.5rem);
+                -o-transform: translate(-1.5rem, +1.5rem);
+                -ms-transform: translate(-1.5rem, +1.5rem);
+            }
+            
+            100% {
+                transform: translate(0rem, 0rem);
+                -webkit-transform: translate(0rem, 0rem);
+                -moz-transform: translate(0rem, 0rem);
+                -o-transform: translate(0rem, 0rem);
+                -ms-transform: translate(0rem, 0rem);
+            }
+
+        }
+        
+        animation: 1s ease-in 0s 1 translate;
+        -webkit-animation: 1s ease-in 0s 1 translate;
+        -moz-animation: 1s ease-in 0s 1 translate;
+        -o-animation: 1s ease-in 0s 1 translate;
     }
 
 `
